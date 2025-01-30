@@ -1,0 +1,214 @@
+body {
+    background-image: url(../imagens/fundo-site.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    font-family: 'Another Danger-Demo';
+    font-size: 15px;
+    letter-spacing: 8px;
+    word-spacing: 8px;
+}
+
+.cabecalho .titulo {
+    color: #000
+}
+
+.cartao {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 10px;
+    gap: 5px;
+    position: absolute;
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.lista-personagens {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    padding: 12px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+}
+
+.cartao .nome {
+    font-size: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right top, #191919, #232324, #2e2e2f, #38393b, #434447, #4d4e52, #58595d, #636468, #707174, #7d7d80, #8b8b8c, #989899);
+    color: #f1ecff;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-family: 'TypoSlab-Irregular-Demo';
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.cartao .estrela {
+    width: 20px;
+    height: 20px;
+    background-image: url(../imagens/nivel-carta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.cartao .nivel-carta {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    gap: 5px;
+}
+
+.cartao .imagem-carta {
+    max-width: 260px;
+    align-self: center;
+}
+
+.cartao .informacoes {
+    border-radius: 5px;
+    max-width: 300px;
+    background-image: linear-gradient(to right, #242424, #272728, #2b2b2b, #2e2e2f, #323233, #373738, #3c3d3e, #414243, #494a4b, #525353, #5a5b5c, #636464);
+    color: #f1ecff;
+    border: 2px solid #000;
+    text-align: left;
+    line-height: 1.5;
+    padding: 5px;
+    font-family: 'Leander';
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 6px;
+}
+.cartao .informacoes .informacoes-ataque {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 10px;
+}
+
+.cartao .informacoes .informacoes-ataque {
+    font-size: 13px;
+}
+
+.cartao .informacoes .descricao {
+    border-bottom: 1px solid #212121;
+    padding: 10px;
+    max-height: 95px;
+    overflow-y: scroll;
+}
+
+.fundo-1 {
+    background: url(../imagens/fundo-1.jpg) no-repeat;
+}
+
+.fundo-2 {
+    background: url(../imagens/fundo-2.jpg) no-repeat;
+}
+
+.fundo-3 {
+    background: url(../imagens/fundo-3.jpg) no-repeat;
+}
+
+.fundo-4 {
+    background: url(../imagens/fundo-4.jpg) no-repeat;
+}
+
+.fundo-5 {
+    background: url(../imagens/fundo-5.jpg) no-repeat;
+}
+
+.fundo-6 {
+    background: url(../imagens/fundo-6.jpg) no-repeat;
+}
+
+.fundo-7 {
+    background: url(../imagens/fundo-7.jpg) no-repeat;
+}
+
+.btn-seta{
+    background-color: #ffff;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0. 2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btn-seta.btn-voltar{
+    transform: rotateY(180deg);
+}
+
+.btn-seta:hover{
+    background-color: #838d8d;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #0e0d0d;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #252526;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #0e0d0d;
+}
+
+.carta-virada {
+    display: none;
+}
+
+.carta-virada.mostrar-fundo-carta {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../imagens/fundo-carta.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.cartao.virar {
+    transform: rotateZ(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.esconder {
+    display: none;
+}
