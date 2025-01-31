@@ -58,6 +58,10 @@
     }
 
     .cartao .nome {
-        font-size: 10px;
+        font-size: 15px;
+    }
+
+    .cartao .informacoes {
+        font-size: 13px;
     }
 }
